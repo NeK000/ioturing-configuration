@@ -75,119 +75,15 @@ Here is an example of the configurations.json file that will be generated:
         },
         {
             "entity_type": "switch",
-            "command_on": "docker start beszel",
-            "command_off": "docker stop beszel",
-            "tag": "container beszel",
+            "command_on": "docker start home-assistant",
+            "command_off": "docker stop home-assistant",
+            "tag": "container home-assistant",
             "type": "Terminal"
         },
         {
             "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=beszel\" --format \"{{.Status}}\"",
-            "tag": "container beszel",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start teslamate",
-            "command_off": "docker stop teslamate",
-            "tag": "container teslamate",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=teslamate\" --format \"{{.Status}}\"",
-            "tag": "container teslamate",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start teslamate-grafana",
-            "command_off": "docker stop teslamate-grafana",
-            "tag": "container teslamate-grafana",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=teslamate-grafana\" --format \"{{.Status}}\"",
-            "tag": "container teslamate-grafana",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start homepage",
-            "command_off": "docker stop homepage",
-            "tag": "container homepage",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=homepage\" --format \"{{.Status}}\"",
-            "tag": "container homepage",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start homepage_tailscale",
-            "command_off": "docker stop homepage_tailscale",
-            "tag": "container homepage_tailscale",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=homepage_tailscale\" --format \"{{.Status}}\"",
-            "tag": "container homepage_tailscale",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start mealie",
-            "command_off": "docker stop mealie",
-            "tag": "container mealie",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=mealie\" --format \"{{.Status}}\"",
-            "tag": "container mealie",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start pdf",
-            "command_off": "docker stop pdf",
-            "tag": "container pdf",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=pdf\" --format \"{{.Status}}\"",
-            "tag": "container pdf",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start drawio",
-            "command_off": "docker stop drawio",
-            "tag": "container drawio",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=drawio\" --format \"{{.Status}}\"",
-            "tag": "container drawio",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "switch",
-            "command_on": "docker start firefly_iii_core",
-            "command_off": "docker stop firefly_iii_core",
-            "tag": "container firefly_iii_core",
-            "type": "Terminal"
-        },
-        {
-            "entity_type": "sensor",
-            "command_state": "docker ps --filter \"name=firefly_iii_core\" --format \"{{.Status}}\"",
-            "tag": "container firefly_iii_core",
+            "command_state": "docker ps --filter \"name=home-assistant\" --format \"{{.Status}}\"",
+            "tag": "container home-assistant",
             "type": "Terminal"
         }
     ],
@@ -210,9 +106,4 @@ Here is an example of the configurations.json file that will be generated:
             "type": "App"
         }
     ]
-}
-
-## How It Works
-### Entities: The script generates switch entities to start/stop containers and sensor entities to monitor their state.
-### Static Entities: Predefined system metrics (such as Ram, Temperature, etc.) are also added to the configuration.
-### MQTT Integration: The script allows you to customize the MQTT connection settings, ensuring integration with your MQTT broker.
+ }
