@@ -1,0 +1,25 @@
+# Ignore Go binary files
+*.exe
+*.out
+*.test
+*.dll
+*.so
+*.dylib
+
+# Ignore vendor directory if you're not using Go modules
+/vendor/
+
+# Ignore any configuration files that are specific to your local environment
+/configurations.json
+
+# Ignore IDE/editor files
+.idea/
+.vscode/
+*.swp
+
+# Ignore Go module files (if you're using Go modules, this can be useful for cleanup)
+go.sum
+go.mod
+
+# Ignore build output directories
+/bin/
